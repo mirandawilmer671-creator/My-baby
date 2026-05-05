@@ -1,0 +1,35 @@
+body, html {
+    margin: 0; padding: 0;
+    width: 100%; height: 100%;
+    overflow: hidden;
+    background: linear-gradient(to bottom, #a1d9f1, #fdeff4);
+}
+.sky { position: relative; width: 100vw; height: 100vh; }
+.airplane-container {
+    position: absolute; top: 25%; left: -60%;
+    display: flex; align-items: center;
+    animation: flySmooth 15s linear infinite;
+}
+.airplane img { width: 100px; transform: rotate(5deg); }
+.romantic-banner {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.2rem; color: #d81b60;
+    background: rgba(255, 255, 255, 0.9); padding: 12px 35px;
+    border-radius: 50px; margin-right: 20px;
+    white-space: nowrap; border: 2px solid #f8bbd0;
+    box-shadow: 0 4px 15px rgba(216, 27, 96, 0.2);
+    display: flex; align-items: center; gap: 10px;
+}
+@keyframes flySmooth { 0% { left: -60%; } 100% { left: 110%; } }
+.heart-particle {
+    position: absolute; color: #f48fb1;
+    font-size: 1.5rem; pointer-events: none;
+    animation: heartFall linear;
+}
+@keyframes heartFall {
+    0% { transform: translateY(-10vh) rotate(0deg); opacity: 1; }
+    100% { transform: translateY(110vh) rotate(360deg); opacity: 0; }
+}
+.cloud { position: absolute; background: white; border-radius: 100px; opacity: 0.8; }
+.cloud1 { width: 200px; height: 80px; top: 15%; left: 10%; }
+.cloud2 { width: 150px; height: 60px; top: 50%; right: 15%; }
